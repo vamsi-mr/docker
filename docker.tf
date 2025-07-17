@@ -4,7 +4,7 @@ resource "aws_instance" "docker" {
   vpc_security_group_ids = [aws_security_group.allow_all_docker.id]
   #need more volume for 
   root_block_device {
-    volume_size = "30"
+    volume_size = 50
     volume_type = "gp3" #or gp2
   }
 
@@ -12,9 +12,6 @@ resource "aws_instance" "docker" {
     tags = {
       Name = "${var.project}-${var.environment}-docker"
     }
-
-
-
 }
 
 resource "aws_security_group" "allow_all_docker" {
