@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "=== Script started at: $(date) ===" | tee /var/log/init-script-timer.log
 dnf -y install dnf-plugins-core
 dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
@@ -27,4 +28,4 @@ git clone https://github.com/ahmetb/kubectx /opt/kubectx
 sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 ## K9s Installation
 #  curl -sS https://webinstall.dev/k9s | bash
-
+echo "=== Script ended at: $(date) ===" | tee -a /var/log/init-script-timer.log
