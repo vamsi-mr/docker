@@ -2,6 +2,7 @@ resource "aws_instance" "docker" {
   ami = local.ami_id
   instance_type = "t3.medium"
   vpc_security_group_ids = [aws_security_group.allow_all_docker.id]
+  iam_instance_profile = "AWS-EKS"
   #need more volume for 
   root_block_device {
     volume_size = 50
