@@ -38,7 +38,6 @@ sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 #  curl -sS https://webinstall.dev/k9s | bash
 
 ## EBS volume driver installation
-
 kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/tree/master/deploy/kubernetes/overlays/stable/?ref=release-1.43"
 
 echo "=== Script ended at: $(date) ===" | tee -a /var/log/init-script-timer.log
