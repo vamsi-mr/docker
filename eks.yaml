@@ -10,5 +10,5 @@ managedNodeGroups:
   spot: true
   iam:
     withAddonPolicies:
-    ebs: true
+      ebs: true
 
