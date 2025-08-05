@@ -38,7 +38,7 @@ sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 #  curl -sS https://webinstall.dev/k9s | bash
 
 ## EBS volume driver installation
-kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/tree/master/deploy/kubernetes/overlays/stable/?ref=release-1.43"
+kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.43"
 
 ## Helm Installation
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
