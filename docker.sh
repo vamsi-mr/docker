@@ -40,4 +40,9 @@ sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 ## EBS volume driver installation
 kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/tree/master/deploy/kubernetes/overlays/stable/?ref=release-1.43"
 
+## Helm Installation
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
 echo "=== Script ended at: $(date) ===" | tee -a /var/log/init-script-timer.log
